@@ -1,0 +1,41 @@
+{
+  "name": "typescript-library-boilerplate",
+  "version": "1.0.0",
+  "description": "A starting point for a typescript library",
+  "main": "./dist/bundle.js",
+  "typings": "./lib/src/index",
+  "files": [
+    "dist",
+    "lib/src/*.d.ts",
+    "LICENSE-MIT",
+    "README.md"
+  ],
+  "directories": {},
+  "scripts": {
+    "postinstall": "typings i",
+    "clean": "rm -rf dist lib",
+    "prebuild": "npm run test",
+    "build": "webpack",
+    "pretest": "npm run clean && tsc",
+    "prepublish": "npm run build",
+    "test": "mocha lib/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": {
+    "name": "Aitor Oses",
+    "url": ""
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.5.3",
+    "power-assert": "^1.4.1",
+    "typescript": "^1.8.10",
+    "underscore": "^1.8.3",
+    "webpack": "^1.13.1"
+  },
+  "dependencies": {}
+}
