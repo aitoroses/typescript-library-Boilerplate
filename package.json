@@ -14,11 +14,12 @@
   "scripts": {
     "postinstall": "typings i",
     "clean": "rm -rf dist lib",
-    "prebuild": "npm run test",
     "build": "webpack",
     "pretest": "npm run clean && tsc",
+    "test": "mocha lib/test",
+    "prebuild": "npm run test",
     "prepublish": "npm run build",
-    "test": "mocha lib/test"
+    "release": "npm pack"
   },
   "repository": {
     "type": "git",
